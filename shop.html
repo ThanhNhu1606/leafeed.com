@@ -8,6 +8,7 @@
     />
     <meta name="author" content="Untree.co" />
     <link rel="shortcut icon" href="images/logo@10x.png" />
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <meta name="description" content="" />
     <meta name="keywords" content="bootstrap, bootstrap4" />
@@ -23,6 +24,25 @@
     <title>Leafeed Company</title>
 
     <style>
+
+      .section-title{
+        color: #198754;
+        font-weight: bolder;
+      }
+
+      .list-unstyled li, .col-lg-6 p{
+        color: #212529;
+        font-size:medium;
+      }
+
+      .testimonial-slider-wrap {
+  background: linear-gradient(135deg, #f0fff0, #e0f7fa);
+  padding: 60px 0;
+  border-radius: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
       /* Vị trí tuyệt đối bên trong wrapper */
       #testimonial-nav {
         position: absolute;
@@ -76,7 +96,6 @@
             <div class="header__top__left">
               <ul>
                 <li><i class="fa fa-envelope"></i> teafeed@gmail.com</li>
-                <li>Free shipping for orders from 5 products</li>
               </ul>
             </div>
           </div>
@@ -150,7 +169,7 @@
     </nav>
     <!-- End Header/Navigation -->
 
-    <div class="testimonial-slider-wrap position-relative">
+    <div class="testimonial-slider-wrap position-relative"  data-aos="fade-up">
       <div class="container" style="margin-bottom: 50px">
         <div id="testimonial-nav" class="mb-4 text-center">
           <span class="prev" data-controls="prev"
@@ -161,9 +180,9 @@
           ></span>
         </div>
 
-        <div class="testimonial-slider">
+        <div class="testimonial-slider" >
           <!-- Slide 1 -->
-          <div class="item">
+          <div class="item" >
             <div class="row justify-content-between align-items-center">
               <div class="col-lg-6">
                 <h2 class="section-title">Green Tea Polyphenols</h2>
@@ -199,6 +218,7 @@
                       src="images/power.png"
                       alt="Green Tea Polyphenols"
                       class="img-fluid"
+                      
                     />
                   </div>
                 </div>
@@ -457,8 +477,7 @@
                 My, Tan Thuan Tay Ward, District 7, Ho Chi Minh City, Vietnam.
               </address>
               <p>
-                <i><i class="fa-solid fa-industry"></i></i> Factory: Loc Tan
-                Commune, Bao Lam District, Lam Dong Province
+                <i><i class="fa-solid fa-industry"></i></i> Factory: Trung Thanh commune, Thuan Thanh commune, Pho Yen city, Thai Nguyen province
               </p>
             </div>
 
@@ -521,5 +540,12 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
     <script src="js/custom.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // thời gian animation
+    once: true      // chỉ chạy 1 lần khi cuộn tới
+  });
+</script>
   </body>
 </html>

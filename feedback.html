@@ -8,7 +8,7 @@
     />
     <meta name="author" content="Untree.co" />
     <link rel="shortcut icon" href="images/logo@10x.png" />
-
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <meta name="description" content="" />
     <meta name="keywords" content="bootstrap, bootstrap4" />
 
@@ -38,7 +38,7 @@
             <div class="header__top__left">
               <ul>
                 <li><i class="fa fa-envelope"></i> teafeed@gmail.com</li>
-                <li>Free shipping for orders from 5 products</li>
+                <li></li>
               </ul>
             </div>
           </div>
@@ -116,7 +116,7 @@
     <!-- End Header/Navigation -->
 
     <!-- Start Testimonial Slider -->
-    <div class="testimonial-section before-footer-section">
+    <div class="testimonial-section before-footer-section" data-aos="fade-up">
       <div class="container">
         <div class="row">
           <div class="col-lg-7 mx-auto text-center">
@@ -350,8 +350,7 @@
                 My, Tan Thuan Tay Ward, District 7, Ho Chi Minh City, Vietnam.
               </address>
               <p>
-                <i><i class="fa-solid fa-industry"></i></i> Factory: Loc Tan
-                Commune, Bao Lam District, Lam Dong Province
+                <i><i class="fa-solid fa-industry"></i></i> Factory: Trung Thanh commune, Thuan Thanh commune, Pho Yen city, Thai Nguyen province
               </p>
             </div>
 
@@ -414,5 +413,13 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
     <script src="js/custom.js"></script>
+
+     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // thời gian animation
+    once: true      // chỉ chạy 1 lần khi cuộn tới
+  });
+</script>
   </body>
 </html>

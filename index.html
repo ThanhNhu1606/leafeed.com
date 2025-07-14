@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Untree.co">
   <link rel="shortcut icon" href="images/logo@10x.png">
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <meta name="description" content="" />
   <meta name="keywords" content="bootstrap, bootstrap4" />
@@ -17,6 +19,72 @@
 		<title>Leafeed Company</title>
 
 		<style>
+
+			.image-stack img {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.video-section {
+  /* background: linear-gradient(135deg, #f4fce3, #ffffff); */
+  background: white;
+  padding: 80px 0;
+  position: relative;
+}
+
+.video-section .section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2f7d32;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.video-section .section-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background-color: #f9bf29;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.video-section .ratio {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.video-section .ratio:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .video-section .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+
+/* Hover effect cho ảnh chính */
+/* .image-stack .main-img:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+} */
+
+/* Hover effect cho ảnh trang trí trái */
+.image-stack .decor-img-left:hover {
+  transform: translate(-10px, -10px) rotate(-10deg);
+  opacity: 1;
+}
+
+/* Hover effect cho ảnh trang trí phải */
+.image-stack .decor-img-right:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 
 .section-title {
   font-weight: 700;
@@ -50,6 +118,432 @@
   line-height: 1.6;
   text-align: justify;
 }
+
+/* Rung chuyển nhẹ nhàng */
+@keyframes subtle-shake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-2px, 2px) rotate(-1deg); }
+  40% { transform: translate(2px, -2px) rotate(1deg); }
+  60% { transform: translate(-2px, 1px) rotate(-1deg); }
+  80% { transform: translate(1px, -1px) rotate(1deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.shake {
+  animation: subtle-shake 3s infinite ease-in-out;
+}
+.thought-bubble {
+  background: radial-gradient(circle at 30% 30%, #ffffff, #e6f5eb);
+  border-radius: 60% 40% 60% 40% / 50%;
+  padding: 20px;
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.1),
+    inset 0 1px 3px rgba(255, 255, 255, 0.6);
+  border: 2px solid #d0e6dc;
+  position: relative;
+  animation: floatUpDown 3s ease-in-out infinite;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Hiệu ứng đuôi đám mây cong sang trái */
+.thought-bubble::after,
+.thought-bubble::before {
+  content: "";
+  position: absolute;
+  background: radial-gradient(circle, #ffffff, #e6f5eb);
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #d0e6dc;
+}
+
+/* .testimonial-section {
+  background: linear-gradient(135deg, #fff8e1, #ffe7a3);
+  padding: 60px 0;
+}
+
+.testimonial-section .section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2f2f2f;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.testimonial-section .section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #f9bf29;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.testimonial-slider {
+  position: relative;
+  margin-top: 40px;
+}
+
+.testimonial-block {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.testimonial-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-block blockquote {
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.author-info {
+  text-align: center;
+}
+
+.author-pic img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.author-pic img:hover {
+  transform: scale(1.1);
+}
+
+.author-info h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2f7d32;
+}
+
+#testimonial-nav {
+  position: absolute;
+  top: -40px;
+  right: 20px;
+}
+
+#testimonial-nav span {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 1.2rem;
+  color: #2f2f2f;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#testimonial-nav span:hover {
+  color: #f9bf29 !important;
+
+} */
+
+
+.testimonial-section {
+  background: linear-gradient(135deg, #f0fff0, #e0f7fa);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-section .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2f7d32;
+  margin-bottom: 40px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.testimonial-slider-wrap {
+  position: relative;
+}
+
+.testimonial-block {
+  background: #ffffffcc;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 128, 0, 0.1);
+  transition: transform 0.4s ease, background 0.3s ease;
+}
+
+.testimonial-block:hover {
+  transform: translateY(-6px);
+  background: #ffffffee;
+}
+
+.testimonial-block blockquote p {
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.author-info {
+  margin-top: 20px;
+}
+
+.author-info .author-pic img {
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.1));
+  margin-bottom: 10px;
+}
+
+.author-info h2 {
+  font-size: 1.1rem;
+  color: #2f7d32;
+  font-weight: 600;
+}
+
+/* Điều khiển slider */
+#testimonial-nav {
+  margin-bottom: 30px;
+}
+
+#testimonial-nav span {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.4rem;
+  color: #2f7d32;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#testimonial-nav span:hover {
+  color: #f9bf29;
+}
+
+
+
+.thought-bubble::before {
+    bottom: 54px;
+    right: 116%;
+    width: 14px;
+    height: 14px;
+    transform: rotate(-10deg);
+}
+
+.thought-bubble::after {
+    bottom: 60px;
+    left: -13%;
+    width: 20px;
+    height: 20px;
+    transform: rotate(-15deg);
+}
+
+.thought-bubble .caption {
+  font-size: 0.85rem;
+  color: #2f7d32;
+  margin-top: 8px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.why-choose-section {
+  /* background: linear-gradient(135deg, #e6f4ea, #e0f7fa); */
+  background: white;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-choose-section h2.section-title {
+  color: #2f7d32;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.why-choose-section p {
+  color: #2f2f2f;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.feature {
+  /* background-color: white; */
+  background: linear-gradient(135deg, #f0fff0, #e0f7fa);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 24px rgba(0, 128, 0, 0.15);
+}
+
+.feature .icon {
+  margin-bottom: 15px;
+  height: 50px;
+}
+
+.feature .icon img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.feature h3 {
+  color: #2f7d32;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.img-wrap img {
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+/* Hiệu ứng rung nhẹ ảnh */
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+
+/* .vision-mission-section {
+  background: linear-gradient(135deg, #f0fff0, #e0f7fa);
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2f2f2f;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #f9bf29;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.box {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.box-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2f7d32;
+  margin-bottom: 15px;
+}
+
+.box p {
+  color: #444;
+  line-height: 1.6;
+} */
+
+
+.vision-mission-section {
+  position: relative;
+  background-image: url('images/green-tea.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white; /* để chữ trắng dễ đọc */
+  z-index: 1;
+}
+
+.vision-mission-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* lớp phủ tối mờ */
+  z-index: 0;
+}
+
+
+/* Đảm bảo nội dung nổi lên trên overlay */
+.vision-mission-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Điều chỉnh text cho rõ trên nền tối */
+.vision-mission-section .section-title,
+.vision-mission-section .box-title,
+.vision-mission-section p {
+  color: #fff;
+   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* đổ bóng nhẹ giúp nổi bật */
+}
+
+
+.box {
+  background: rgba(255, 255, 255, 0.1); /* nền bán trong suốt */
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease;
+}
+
+.vision-mission-section .box-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: white;
+  text-align: center; /* căn giữa */
+}
+
+
+.box:hover {
+  transform: translateY(-5px);
+}
+
+/* .why-choose-section {
+  background: #ffffff;
+  padding: 80px 0 60px;
+}
+
+.feature {
+  background: #f4fff4;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  height: 100%;
+} */
+
 		</style>
 	</head>
 	<body>
@@ -61,7 +555,7 @@
                         <div class="header__top__left">
                             <ul>
                                 <li><i class="fa fa-envelope"></i> teafeed@gmail.com</li>
-                                <li>Free shipping for orders from 5 products</li>
+                                <!-- <li></li> -->
                             </ul>
                         </div>
                     </div>
@@ -120,47 +614,70 @@
 		</nav>
 		<!-- End Header/Navigation -->
 
-		<!-- Start Hero Section -->
-			<div class="hero">
-				<div class="container">
-					<div class="row justify-content-between">
-						<div class="col-lg-5">
-							<div class="intro-excerpt">
-								<h1>from Nature <span clsas="d-block">to Nurture</span></h1>
-								<p class="mb-4">From natural raw materials, we extract and develop polyphenols bioactive compounds that provide deep nourishment from within, contributing to a sustainable solution in the animal feed industry.</p>
-								<p><a href="shop.html" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
-							</div>
-						</div>
-						<div class="col-lg-7">
-							<div class="hero-img-wrap">
-								<img src="images/banner.jpg" class="img-fluid" style="height: 300px; border-radius: 20px;">
-								<img src="images/poly.svg" class="img-fluid" style="height: 130px; left:550px; top:-70px">
-								<img src="images/channuoi.jpg" class = "img-fluid" style="height: 180px; left:450px; top:170px; border-radius: 20px;">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		<!-- End Hero Section -->
+<div class="hero py-5" style="background: linear-gradient(135deg, #f0fff0, #e0f7fa); overflow: hidden;" data-aos="fade-up">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6" data-aos="flip-left">
+        <div class="intro-excerpt">
+          <h1 class="fw-bold text-dark display-4 mb-4">
+            From Nature <span class="d-block text-success">to Nurture</span>
+          </h1>
+          <p class="mb-4 text-muted fs-5">
+            From natural raw materials, we extract and develop polyphenols bioactive compounds that provide deep nourishment from within, contributing to a sustainable solution in the animal feed industry.
+          </p>
+          <p>
+<a href="shop.html" class="border-0 btn btn-success me-3 shadow-sm px-4 py-2" style="transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#f9bf29'" onmouseout="this.style.backgroundColor=''" >
+  Shop Now
+</a>
+            <a href="#" class="btn btn-outline-dark px-4 py-2 ">Explore</a>
+          </p>
+        </div>
+      </div>
 
-		<!-- Video Section -->
-<!-- Video Section -->
-<div class="video-section py-5" style="background-color: white;">
-  <div class="container text-center" style="color: #2f2f2f;">
-    <h2 style="margin-bottom: 30px;" class="section-title">Story Telling</h2>
-    <div class="ratio ratio-16x9">
-      <iframe width="853" height="480" src="https://www.youtube.com/embed/nNgRAz-09m8" title="3 Insane Health Benefits of Polyphenols: Your Ultimate Gut Microbiome Boosters | Dr. Steven Gundry" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="col-lg-6">
+		<div class="image-stack position-relative d-flex justify-content-center align-items-center" style="height: 400px;">
+  <!-- Hình chính (con vật + rung nhẹ) -->
+  <img src="images/banner-new.png" class="main-img rounded-4 position-relative shake" style="height: 350px; z-index: 2; right: 100px;">
+
+  <!-- Trang trí trà xanh (ví dụ polyphenol đen) -->
+  <img src="images/poly-black.png" class="position-absolute" style="height: 200px; top: -30px; left: -230px;">
+
+  <!-- Đám mây suy nghĩ chứa hình chăn nuôi -->
+  <div class="thought-bubble position-absolute" style="bottom: 200px; right: -50px;">
+    <img src="images/channuoi.jpg" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover;">
+    <p class="caption">Healthy livestock</p>
+  </div>
+</div>
+      </div>
     </div>
   </div>
 </div>
+
+
+<!-- Video Section -->
+<div class="video-section" data-aos="fade-up">
+  <div class="container text-center">
+    <h2 class="section-title">Our Story</h2>
+    <div class="ratio ratio-16x9">
+      <iframe width="853" height="480" src="https://www.youtube.com/embed/nNgRAz-09m8"
+        title="3 Insane Health Benefits of Polyphenols: Your Ultimate Gut Microbiome Boosters | Dr. Steven Gundry"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
+
 
 <div id="about-us">
 <div class="vision-mission-section py-5">
   <div class="container">
     <h2 class="text-center mb-5 section-title">Vision, Mission & Business Philosophy</h2>
-    <div class="row">
+    <div class="row" data-aos="fade-up">
       <div class="col-md-4">
-        <div class="box h-100">
+        <div class="box h-100" data-aos="fade-up">
           <h4 class="box-title">Our Vision</h4>
           <p>
             To become a pioneer in the sustainable export of green tea leaf-based feed additives, promoting diversified livelihoods for farmers, spreading green technology, and contributing to the development of clean and responsible livestock farming worldwide.
@@ -185,8 +702,8 @@
       </div>
     </div>
   </div>
+</div>		
 
-  <!-- Start Why Choose Us Section -->
 		<div class="why-choose-section">
 			<div class="container">
 				<div class="row justify-content-between">
@@ -196,7 +713,7 @@
 
 						<div class="row my-5">
 							<div class="col-6 col-md-6">
-								<div class="feature">
+								<div class="feature" data-aos="flip-left">
 									<div class="icon">
 										<img src="images/truck.svg" alt="Image" class="imf-fluid">
 									</div>
@@ -206,7 +723,7 @@
 							</div>
 
 							<div class="col-6 col-md-6">
-								<div class="feature">
+								<div class="feature" data-aos="flip-left">
 									<div class="icon">
 										<img src="images/bag.svg" alt="Image" class="imf-fluid">
 									</div>
@@ -216,7 +733,7 @@
 							</div>
 
 							<div class="col-6 col-md-6">
-								<div class="feature">
+								<div class="feature" data-aos="flip-left">
 									<div class="icon">
 										<img src="images/support.svg" alt="Image" class="imf-fluid">
 									</div>
@@ -226,7 +743,7 @@
 							</div>
 
 							<div class="col-6 col-md-6">
-								<div class="feature">
+								<div class="feature" data-aos="flip-left">
 									<div class="icon">
 										<img src="images/return.svg" alt="Image" class="imf-fluid">
 									</div>
@@ -240,24 +757,20 @@
 
 					<div class="col-lg-5">
 						<div class="img-wrap">
-							<img src="images/green.png" alt="Image" class="img-fluid">
+							<img src="images/green.png" alt="Image" class="img-fluid" data-aos="zoom-in">
 						</div>
 					</div>
 
 				</div>
 			</div>
 		</div>
-		<!-- End Why Choose Us Section -->
-
-</div>		
-
 
 		<!-- Start Testimonial Slider -->
-		<div class="testimonial-section" style="background-color: #fff2cb;">
+		<div class="testimonial-section" data-aos="fade-up" style="background-color: #fff2cb; ">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-7 mx-auto text-center">
-						<h2 style="color: #2f2f2f;" class="section-title">Certifications</h2>
+						<h2 class="section-title">Certifications</h2>
 					</div>
 				</div>
 
@@ -348,61 +861,6 @@ From production to delivery, ENplus guarantees that pellets meet strict standard
 		</div>
 		<!-- End Testimonial Slider -->
 
-		<!-- Start Blog Section -->
-		<!-- <div class="blog-section">
-			<div class="container">
-				<div class="row mb-5">
-					<div class="col-md-6">
-						<h2 class="section-title">Recent Blog</h2>
-					</div>
-					<div class="col-md-6 text-start text-md-end">
-						<a href="#" class="more">View All Posts</a>
-					</div>
-				</div>
-
-				<div class="row">
-
-					<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-						<div class="post-entry">
-							<a href="#" class="post-thumbnail"><img src="images/post-1.jpg" alt="Image" class="img-fluid"></a>
-							<div class="post-content-entry">
-								<h3><a href="#">First Time Home Owner Ideas</a></h3>
-								<div class="meta">
-									<span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 19, 2021</a></span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-						<div class="post-entry">
-							<a href="#" class="post-thumbnail"><img src="images/post-2.jpg" alt="Image" class="img-fluid"></a>
-							<div class="post-content-entry">
-								<h3><a href="#">How To Keep Your Furniture Clean</a></h3>
-								<div class="meta">
-									<span>by <a href="#">Robert Fox</a></span> <span>on <a href="#">Dec 15, 2021</a></span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-						<div class="post-entry">
-							<a href="#" class="post-thumbnail"><img src="images/post-3.jpg" alt="Image" class="img-fluid"></a>
-							<div class="post-content-entry">
-								<h3><a href="#">Small Space Furniture Apartment Ideas</a></h3>
-								<div class="meta">
-									<span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 12, 2021</a></span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div> -->
-		<!-- End Blog Section -->	
-
 		<!-- Start Footer Section -->
 		<footer class="footer-section">
 			<div class="container relative">
@@ -488,5 +946,12 @@ From production to delivery, ENplus guarantees that pellets meet strict standard
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/tiny-slider.js"></script>
 		<script src="js/custom.js"></script>
+		<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // thời gian animation
+    once: true      // chỉ chạy 1 lần khi cuộn tới
+  });
+</script>
 	</body>
 </html>
