@@ -1,17 +1,12 @@
-<!-- /*
-* Bootstrap 5
-* Template Name: Furni
-* Template Author: Untree.co
-* Template URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Untree.co">
-  <link rel="shortcut icon" href="favicon.png">
+  <link rel="shortcut icon" href="images/logo@10x.png">
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <meta name="description" content="" />
   <meta name="keywords" content="bootstrap, bootstrap4" />
@@ -21,16 +16,438 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 		<link href="css/tiny-slider.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
-		<title>Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co </title>
-	</head>
+		<title>Leafeed Company</title>
 
+		<style>
+
+			.image-stack img {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.video-section {
+  background: white;
+  padding: 80px 0;
+  position: relative;
+}
+
+.video-section .section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2f7d32;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.video-section .section-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background-color: #f9bf29;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.video-section .ratio {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.video-section .ratio:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .video-section .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+.image-stack .decor-img-left:hover {
+  transform: translate(-10px, -10px) rotate(-10deg);
+  opacity: 1;
+}
+
+.image-stack .decor-img-right:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 32px;
+  color:#3b5d50;
+}
+
+.box {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.box-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #3b5d50;
+  margin-bottom: 15px;
+}
+
+.box p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Rung chuyển nhẹ nhàng */
+@keyframes subtle-shake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-2px, 2px) rotate(-1deg); }
+  40% { transform: translate(2px, -2px) rotate(1deg); }
+  60% { transform: translate(-2px, 1px) rotate(-1deg); }
+  80% { transform: translate(1px, -1px) rotate(1deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.shake {
+  animation: subtle-shake 3s infinite ease-in-out;
+}
+.thought-bubble {
+  background: radial-gradient(circle at 30% 30%, #ffffff, #e6f5eb);
+  border-radius: 60% 40% 60% 40% / 50%;
+  padding: 20px;
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.1),
+    inset 0 1px 3px rgba(255, 255, 255, 0.6);
+  border: 2px solid #d0e6dc;
+  position: relative;
+  animation: floatUpDown 3s ease-in-out infinite;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.thought-bubble::after,
+.thought-bubble::before {
+  content: "";
+  position: absolute;
+  background: radial-gradient(circle, #ffffff, #e6f5eb);
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #d0e6dc;
+}
+
+.testimonial-section {
+  background: linear-gradient(135deg, #f0fff0, #e0f7fa);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-section .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2f7d32;
+  margin-bottom: 40px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.testimonial-slider-wrap {
+  position: relative;
+}
+
+.testimonial-block {
+  background: #ffffffcc;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 128, 0, 0.1);
+  transition: transform 0.4s ease, background 0.3s ease;
+}
+
+.testimonial-block:hover {
+  transform: translateY(-6px);
+  background: #ffffffee;
+}
+
+.testimonial-block blockquote p {
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.author-info {
+  margin-top: 20px;
+}
+
+.author-info .author-pic img {
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.1));
+  margin-bottom: 10px;
+}
+
+.author-info h2 {
+  font-size: x-large;
+  color: #2f7d32;
+  font-weight: 800;
+}
+
+/* Điều khiển slider */
+#testimonial-nav {
+  margin-bottom: 30px;
+}
+
+#testimonial-nav span {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.4rem;
+  color: #2f7d32;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#testimonial-nav span:hover {
+  color: #f9bf29;
+}
+
+
+
+.thought-bubble::before {
+    bottom: 54px;
+    right: 116%;
+    width: 14px;
+    height: 14px;
+    transform: rotate(-10deg);
+}
+
+.thought-bubble::after {
+    bottom: 60px;
+    left: -13%;
+    width: 20px;
+    height: 20px;
+    transform: rotate(-15deg);
+}
+
+.thought-bubble .caption {
+  font-size: 0.85rem;
+  color: #2f7d32;
+  margin-top: 8px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.why-choose-section {
+  /* background: linear-gradient(135deg, #e6f4ea, #e0f7fa); */
+  background: white;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-choose-section h2.section-title {
+  color: #2f7d32;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.why-choose-section p {
+  color: #2f2f2f;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.feature {
+  /* background-color: white; */
+  background: linear-gradient(135deg, #f0fff0, #e0f7fa);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 24px rgba(0, 128, 0, 0.15);
+}
+
+.feature .icon {
+  margin-bottom: 15px;
+  height: 50px;
+}
+
+.feature .icon img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.feature h3 {
+  color: #2f7d32;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.img-wrap img {
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+/* Hiệu ứng rung nhẹ ảnh */
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.vision-mission-section {
+  position: relative;
+  background-image: url('images/green-tea.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white; /* để chữ trắng dễ đọc */
+  z-index: 1;
+}
+
+.vision-mission-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* lớp phủ tối mờ */
+  z-index: 0;
+}
+
+
+/* Đảm bảo nội dung nổi lên trên overlay */
+.vision-mission-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Điều chỉnh text cho rõ trên nền tối */
+.vision-mission-section .section-title,
+.vision-mission-section .box-title,
+.vision-mission-section p {
+  color: #fff;
+   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* đổ bóng nhẹ giúp nổi bật */
+}
+
+
+.box {
+  background: rgba(255, 255, 255, 0.1); /* nền bán trong suốt */
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease;
+}
+
+.vision-mission-section .box-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: white;
+  text-align: center; /* căn giữa */
+}
+
+
+.box:hover {
+  transform: translateY(-5px);
+}
+
+.sticky-top {
+  z-index: 1030;
+  transition: box-shadow 0.3s ease;
+}
+
+.sticky-top.scrolled {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  height: 100px;
+}
+
+.logo-img {
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled .logo-img {
+  width: 60px;
+  height: 60px;
+} 
+
+.navbar-brand .logo-img{
+  width: 100px;
+  height: 100px;
+}
+
+		</style>
+	</head>
 	<body>
 
+<div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__left">
+                            <ul>
+                                <li><i class="fa fa-envelope"></i> teafeed@gmail.com</li>
+                                <!-- <li></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__right">
+                            <div class="header__top__right__social">
+                            </div>
+                            <div class="header__top__right__language">
+                                <img src="images/eng.jpg" alt="" style="width: 21px; height: 14px;">
+                                <div>English</div>
+                                <span class="arrow_carrot-down"></span>
+                                <ul style="text-decoration: none;">
+                                    <li ><a href="#">VietNam</a></li>
+                                    <li><a href="#">English</a></li>
+                                </ul>
+                            </div>
+                            <div class="header__top__right__auth">
+                                <a style="text-decoration: none;" href="#"><i class="fa fa-user"></i> Log in</a>
+                            </div>
+							<div class="header__top__right__social">
+                            </div>
+							<div class="header__top__right__auth">
+                                <a style="text-decoration: none;" href="#"><i class="fa-solid fa-cart-plus"></i> Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 		<!-- Start Header/Navigation -->
-		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark sticky-top" arial-label="Furni navigation bar">
 
 			<div class="container">
-				<a class="navbar-brand" href="index.html">Furni<span>.</span></a>
+				<a class="navbar-brand" href="index.html">
+					<img class="logo-img" src="images/logo@10x.png" alt="Leafeed Company"></a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -38,95 +455,98 @@
 
 				<div class="collapse navbar-collapse" id="navbarsFurni">
 					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-						<li class="nav-item ">
-							<a class="nav-link" href="index.html">Home</a>
-						</li>
-						<li><a class="nav-link" href="shop.html">Shop</a></li>
-						<li class="active"><a class="nav-link" href="about.html">About us</a></li>
-						<li><a class="nav-link" href="services.html">Services</a></li>
-						<li><a class="nav-link" href="blog.html">Blog</a></li>
+						<li>
+							<a class="nav-link " href="index.html">Home</a></li>
+						<li><a class="nav-link" href="shop.html">Product</a></li>
+						<li class="nav-item active"><a class="nav-link" href="about.html">What we do</a></li>
+						<li><a class="nav-link" href="blog.html">News</a></li>
 						<li><a class="nav-link" href="contact.html">Contact us</a></li>
 					</ul>
 
-					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-						<li><a class="nav-link" href="#"><img src="images/user.svg"></a></li>
-						<li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
-					</ul>
 				</div>
 			</div>
 				
 		</nav>
 		<!-- End Header/Navigation -->
 
-		<!-- Start Hero Section -->
-			<div class="hero">
-				<div class="container">
-					<div class="row justify-content-between">
-						<div class="col-lg-5">
-							<div class="intro-excerpt">
-								<h1>About Us</h1>
-								<p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
-								<p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
-							</div>
-						</div>
-						<div class="col-lg-7">
-							<div class="hero-img-wrap">
-								<img src="images/couch.png" class="img-fluid">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		<!-- End Hero Section -->
+<div id="about-us">
+<div class="vision-mission-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 section-title">Vision, Mission & Business Philosophy</h2>
+    <div class="row" data-aos="fade-up">
+      <div class="col-md-4">
+        <div class="box h-100">
+          <h4 class="box-title">Our Vision</h4>
+          <p>
+            To become a pioneer in the sustainable export of green tea leaf-based feed additives, promoting diversified livelihoods for farmers, spreading green technology, and contributing to the development of clean and responsible livestock farming worldwide.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="box h-100">
+          <h4 class="box-title">Our Mission</h4>
+          <p>
+            Understanding the importance of food safety and the concerns around antibiotic residues, we offer the ideal alternative for livestock – committed to safe, sustainable, and health-conscious supply chains. We aim to support farmers in producing reliable, clean food while enhancing animal immunity and resilience. A sustainable livestock industry begins with the right choices today.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="box h-100">
+          <h4 class="box-title">Business Philosophy</h4>
+          <p>
+            Leafeed strives to be a trusted companion in sustainable livestock development. With a strong sense of responsibility and deep understanding of customer needs, we continuously innovate and improve product quality. We are committed to delivering effective, competitively priced solutions, upholding business ethics, and complying with all regulations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>		
 
-		
-
-		<!-- Start Why Choose Us Section -->
 		<div class="why-choose-section">
 			<div class="container">
-				<div class="row justify-content-between align-items-center">
+				<div class="row justify-content-between">
 					<div class="col-lg-6">
 						<h2 class="section-title">Why Choose Us</h2>
-						<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
+						<p style="text-align: justify;">Understanding the importance of food safety and concerns about antibiotic residues, we offer the perfect alternative in livestock farming — a solution committed to safe, sustainable, and consumer-friendly supply sources. In doing so, we aim to become a trusted partner for farmers on their journey to producing clean and reliable food. Additionally, our solution supports the enhancement of animals' natural immunity and resistance. We believe that a sustainable livestock industry begins with the right choices made today.</p>
 
 						<div class="row my-5">
 							<div class="col-6 col-md-6">
-								<div class="feature">
+								<div class="feature" data-aos="flip-left">
 									<div class="icon">
 										<img src="images/truck.svg" alt="Image" class="imf-fluid">
 									</div>
 									<h3>Fast &amp; Free Shipping</h3>
-									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+									<p>Enjoy fast, reliable, and free delivery on every order — because you deserve the best service without extra cost.</p>
 								</div>
 							</div>
 
 							<div class="col-6 col-md-6">
-								<div class="feature">
+								<div class="feature" data-aos="flip-left">
 									<div class="icon">
 										<img src="images/bag.svg" alt="Image" class="imf-fluid">
 									</div>
 									<h3>Easy to Shop</h3>
-									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+									<p>Our support team is here around the clock to help you with any questions, anytime, anywhere.</p>
 								</div>
 							</div>
 
 							<div class="col-6 col-md-6">
-								<div class="feature">
+								<div class="feature" data-aos="flip-left">
 									<div class="icon">
 										<img src="images/support.svg" alt="Image" class="imf-fluid">
 									</div>
 									<h3>24/7 Support</h3>
-									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+									<p>Our support team is here around the clock to help you with any questions, anytime, anywhere.</p>
 								</div>
 							</div>
 
 							<div class="col-6 col-md-6">
-								<div class="feature">
+								<div class="feature" data-aos="flip-left">
 									<div class="icon">
 										<img src="images/return.svg" alt="Image" class="imf-fluid">
 									</div>
 									<h3>Hassle Free Returns</h3>
-									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+									<p>Changed your mind? No worries — our return process is quick, easy, and worry-free.</p>
 								</div>
 							</div>
 
@@ -135,191 +555,22 @@
 
 					<div class="col-lg-5">
 						<div class="img-wrap">
-							<img src="images/why-choose-us-img.jpg" alt="Image" class="img-fluid">
+							<img src="images/green.png" alt="Image" class="img-fluid" data-aos="zoom-in">
 						</div>
 					</div>
 
 				</div>
 			</div>
 		</div>
-		<!-- End Why Choose Us Section -->
 
-		<!-- Start Team Section -->
-		<div class="untree_co-section">
-			<div class="container">
-
-				<div class="row mb-5">
-					<div class="col-lg-5 mx-auto text-center">
-						<h2 class="section-title">Our Team</h2>
-					</div>
-				</div>
-
-				<div class="row">
-
-					<!-- Start Column 1 -->
-					<div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
-						<img src="images/person_1.jpg" class="img-fluid mb-5">
-						<h3 clas><a href="#"><span class="">Lawson</span> Arnold</a></h3>
-            <span class="d-block position mb-4">CEO, Founder, Atty.</span>
-            <p>Separated they live in.
-            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-            <p class="mb-0"><a href="#" class="more dark">Learn More <span class="icon-arrow_forward"></span></a></p>
-					</div> 
-					<!-- End Column 1 -->
-
-					<!-- Start Column 2 -->
-					<div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
-						<img src="images/person_2.jpg" class="img-fluid mb-5">
-
-						<h3 clas><a href="#"><span class="">Jeremy</span> Walker</a></h3>
-            <span class="d-block position mb-4">CEO, Founder, Atty.</span>
-            <p>Separated they live in.
-            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-            <p class="mb-0"><a href="#" class="more dark">Learn More <span class="icon-arrow_forward"></span></a></p>
-
-					</div> 
-					<!-- End Column 2 -->
-
-					<!-- Start Column 3 -->
-					<div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
-						<img src="images/person_3.jpg" class="img-fluid mb-5">
-						<h3 clas><a href="#"><span class="">Patrik</span> White</a></h3>
-            <span class="d-block position mb-4">CEO, Founder, Atty.</span>
-            <p>Separated they live in.
-            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-            <p class="mb-0"><a href="#" class="more dark">Learn More <span class="icon-arrow_forward"></span></a></p>
-					</div> 
-					<!-- End Column 3 -->
-
-					<!-- Start Column 4 -->
-					<div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
-						<img src="images/person_4.jpg" class="img-fluid mb-5">
-
-						<h3 clas><a href="#"><span class="">Kathryn</span> Ryan</a></h3>
-            <span class="d-block position mb-4">CEO, Founder, Atty.</span>
-            <p>Separated they live in.
-            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-            <p class="mb-0"><a href="#" class="more dark">Learn More <span class="icon-arrow_forward"></span></a></p>
-
-          
-					</div> 
-					<!-- End Column 4 -->
-
-					
-
-				</div>
-			</div>
-		</div>
-		<!-- End Team Section -->
-
-		
-
-		<!-- Start Testimonial Slider -->
-		<div class="testimonial-section before-footer-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-7 mx-auto text-center">
-						<h2 class="section-title">Testimonials</h2>
-					</div>
-				</div>
-
-				<div class="row justify-content-center">
-					<div class="col-lg-12">
-						<div class="testimonial-slider-wrap text-center">
-
-							<div id="testimonial-nav">
-								<span class="prev" data-controls="prev"><span class="fa fa-chevron-left"></span></span>
-								<span class="next" data-controls="next"><span class="fa fa-chevron-right"></span></span>
-							</div>
-
-							<div class="testimonial-slider">
-								
-								<div class="item">
-									<div class="row justify-content-center">
-										<div class="col-lg-8 mx-auto">
-
-											<div class="testimonial-block text-center">
-												<blockquote class="mb-5">
-													<p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
-												</blockquote>
-
-												<div class="author-info">
-													<div class="author-pic">
-														<img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
-													</div>
-													<h3 class="font-weight-bold">Maria Jones</h3>
-													<span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
-												</div>
-											</div>
-
-										</div>
-									</div>
-								</div> 
-								<!-- END item -->
-
-								<div class="item">
-									<div class="row justify-content-center">
-										<div class="col-lg-8 mx-auto">
-
-											<div class="testimonial-block text-center">
-												<blockquote class="mb-5">
-													<p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
-												</blockquote>
-
-												<div class="author-info">
-													<div class="author-pic">
-														<img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
-													</div>
-													<h3 class="font-weight-bold">Maria Jones</h3>
-													<span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
-												</div>
-											</div>
-
-										</div>
-									</div>
-								</div> 
-								<!-- END item -->
-
-								<div class="item">
-									<div class="row justify-content-center">
-										<div class="col-lg-8 mx-auto">
-
-											<div class="testimonial-block text-center">
-												<blockquote class="mb-5">
-													<p>&ldquo;Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer convallis volutpat dui quis scelerisque.&rdquo;</p>
-												</blockquote>
-
-												<div class="author-info">
-													<div class="author-pic">
-														<img src="images/person-1.png" alt="Maria Jones" class="img-fluid">
-													</div>
-													<h3 class="font-weight-bold">Maria Jones</h3>
-													<span class="position d-block mb-3">CEO, Co-Founder, XYZ Inc.</span>
-												</div>
-											</div>
-
-										</div>
-									</div>
-								</div> 
-								<!-- END item -->
-
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- End Testimonial Slider -->
-
-		
+	
 
 		<!-- Start Footer Section -->
 		<footer class="footer-section">
 			<div class="container relative">
 
 				<div class="sofa-img">
-					<img src="images/sofa.png" alt="Image" class="img-fluid">
+					<img src="images/banner-footer.svg" alt="Image" class="img-fluid" style="height: 350px;">
 				</div>
 
 				<div class="row">
@@ -347,8 +598,13 @@
 
 				<div class="row g-5 mb-5">
 					<div class="col-lg-4">
-						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Furni<span>.</span></a></div>
-						<p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
+						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo"><img src="images/logo@10x.png" alt="Leafeed" style="height: 100px;"></a></div>
+						<div style="text-align: justify;" class="mb-4">
+							<p> <i><i class="fa-solid fa-phone-volume"></i></i> Hotline: 1800 6868</p>
+							<p><i><i class="fa-solid fa-envelope"></i></i> Email: teafeed@gmail.com</p>
+							<address><i><i class="fa-solid fa-location-dot"></i></i> Address: 27 Tan My, Tan Thuan Tay Ward, District 7, Ho Chi Minh City, Vietnam.</address>
+							<p><i><i class="fa-solid fa-industry"></i></i> Factory: Trung Thanh commune, Thuan Thanh commune, Pho Yen city, Thai Nguyen province</p>
+						</div>
 
 						<ul class="list-unstyled custom-social">
 							<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
@@ -362,67 +618,57 @@
 						<div class="row links-wrap">
 							<div class="col-6 col-sm-6 col-md-3">
 								<ul class="list-unstyled">
-									<li><a href="#">About us</a></li>
-									<li><a href="#">Services</a></li>
-									<li><a href="#">Blog</a></li>
-									<li><a href="#">Contact us</a></li>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="shop.html">Product</a></li>
+									<li><a href="about.html">What we do</a></li>
+									<li><a href="blog.html">News</a></li>
+									<li><a href="contact.html">Contact us</a></li>
 								</ul>
 							</div>
 
 							<div class="col-6 col-sm-6 col-md-3">
 								<ul class="list-unstyled">
 									<li><a href="#">Support</a></li>
-									<li><a href="#">Knowledge base</a></li>
-									<li><a href="#">Live chat</a></li>
-								</ul>
-							</div>
-
-							<div class="col-6 col-sm-6 col-md-3">
-								<ul class="list-unstyled">
-									<li><a href="#">Jobs</a></li>
-									<li><a href="#">Our team</a></li>
-									<li><a href="#">Leadership</a></li>
+									<li><a href="#">FAQ</a></li>
 									<li><a href="#">Privacy Policy</a></li>
+									<li><a href="#">Terms and Conditions of Use</a></li>
+
 								</ul>
 							</div>
 
-							<div class="col-6 col-sm-6 col-md-3">
-								<ul class="list-unstyled">
-									<li><a href="#">Nordic Chair</a></li>
-									<li><a href="#">Kruzo Aero</a></li>
-									<li><a href="#">Ergonomic Chair</a></li>
-								</ul>
-							</div>
 						</div>
 					</div>
 
 				</div>
 
-				<div class="border-top copyright">
-					<div class="row pt-4">
-						<div class="col-lg-6">
-							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a hreff="https://themewagon.com">ThemeWagon</a>  <!-- License information: https://untree.co/license/ -->
-            </p>
-						</div>
-
-						<div class="col-lg-6 text-center text-lg-end">
-							<ul class="list-unstyled d-inline-flex ms-auto">
-								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-							</ul>
-						</div>
-
-					</div>
+				<div class="border-top copyright text-center pt-4" style="text-align: center;">
+					<p class="mb-2" style="text-align: center;">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved.</p>
 				</div>
-
 			</div>
 		</footer>
 		<!-- End Footer Section -->	
-
-
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/tiny-slider.js"></script>
 		<script src="js/custom.js"></script>
-	</body>
+		<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // thời gian animation
+    once: true      // chỉ chạy 1 lần khi cuộn tới
+  });
+</script>
 
+<script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 20) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+
+
+	</body>
 </html>
