@@ -24,7 +24,6 @@
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 .video-section {
-  /* background: linear-gradient(135deg, #f4fce3, #ffffff); */
   background: white;
   padding: 80px 0;
   position: relative;
@@ -67,20 +66,11 @@
   }
 }
 
-
-/* Hover effect cho ảnh chính */
-/* .image-stack .main-img:hover {
-  transform: scale(1.05) rotate(1deg);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-} */
-
-/* Hover effect cho ảnh trang trí trái */
 .image-stack .decor-img-left:hover {
   transform: translate(-10px, -10px) rotate(-10deg);
   opacity: 1;
 }
 
-/* Hover effect cho ảnh trang trí phải */
 .image-stack .decor-img-right:hover {
   transform: scale(1.1) rotate(5deg);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -146,7 +136,6 @@
   transition: all 0.3s ease;
 }
 
-/* Hiệu ứng đuôi đám mây cong sang trái */
 .thought-bubble::after,
 .thought-bubble::before {
   content: "";
@@ -156,99 +145,6 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   border: 1px solid #d0e6dc;
 }
-
-/* .testimonial-section {
-  background: linear-gradient(135deg, #fff8e1, #ffe7a3);
-  padding: 60px 0;
-}
-
-.testimonial-section .section-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #2f2f2f;
-  margin-bottom: 30px;
-  position: relative;
-  display: inline-block;
-}
-
-.testimonial-section .section-title::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 4px;
-  background-color: #f9bf29;
-  margin: 10px auto 0;
-  border-radius: 2px;
-}
-
-.testimonial-slider {
-  position: relative;
-  margin-top: 40px;
-}
-
-.testimonial-block {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 40px 30px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.testimonial-block:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-}
-
-.testimonial-block blockquote {
-  font-size: 1.05rem;
-  font-style: italic;
-  line-height: 1.7;
-  color: #444;
-  margin-bottom: 30px;
-}
-
-.author-info {
-  text-align: center;
-}
-
-.author-pic img {
-  height: 80px;
-  width: auto;
-  object-fit: contain;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease;
-}
-
-.author-pic img:hover {
-  transform: scale(1.1);
-}
-
-.author-info h2 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #2f7d32;
-}
-
-#testimonial-nav {
-  position: absolute;
-  top: -40px;
-  right: 20px;
-}
-
-#testimonial-nav span {
-  display: inline-block;
-  margin: 0 5px;
-  font-size: 1.2rem;
-  color: #2f2f2f;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-#testimonial-nav span:hover {
-  color: #f9bf29 !important;
-
-} */
-
 
 .testimonial-section {
   background: linear-gradient(135deg, #f0fff0, #e0f7fa);
@@ -422,55 +318,6 @@
   50% { transform: translateY(-6px); }
 }
 
-
-/* .vision-mission-section {
-  background: linear-gradient(135deg, #f0fff0, #e0f7fa);
-  padding: 80px 0;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #2f2f2f;
-  position: relative;
-}
-
-.section-title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background-color: #f9bf29;
-  margin: 12px auto 0;
-  border-radius: 2px;
-}
-
-.box {
-  background: #ffffff;
-  padding: 30px 25px;
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-}
-
-.box-title {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #2f7d32;
-  margin-bottom: 15px;
-}
-
-.box p {
-  color: #444;
-  line-height: 1.6;
-} */
-
-
 .vision-mission-section {
   position: relative;
   background-image: url('images/green-tea.jpg');
@@ -529,20 +376,29 @@
   transform: translateY(-5px);
 }
 
-/* .why-choose-section {
-  background: #ffffff;
-  padding: 80px 0 60px;
+.sticky-top {
+  z-index: 1030;
+  transition: box-shadow 0.3s ease;
 }
 
-.feature {
-  background: #f4fff4;
-  border-radius: 15px;
-  padding: 20px;
-  margin-bottom: 30px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+.sticky-top.scrolled {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  height: 100px;
+}
+
+.logo-img {
   transition: all 0.3s ease;
-  height: 100%;
-} */
+}
+
+.navbar.scrolled .logo-img {
+  width: 60px;
+  height: 60px;
+} 
+
+.navbar-brand .logo-img{
+  width: 100px;
+  height: 100px;
+}
 
 		</style>
 	</head>
@@ -587,11 +443,11 @@
         </div>
 
 		<!-- Start Header/Navigation -->
-		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark sticky-top" arial-label="Furni navigation bar">
 
 			<div class="container">
 				<a class="navbar-brand" href="index.html">
-					<img src="images/logo@10x.png" alt="Leafeed Company" style="width:100px; height: 100px"></a>
+					<img class="logo-img" src="images/logo@10x.png" alt="Leafeed Company"></a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -972,5 +828,18 @@
     once: true      // chỉ chạy 1 lần khi cuộn tới
   });
 </script>
+
+<script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 20) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+
+
 	</body>
 </html>

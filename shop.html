@@ -210,6 +210,33 @@
   50% { transform: translateY(6px); }
 }
 
+
+
+.sticky-top {
+  z-index: 1030;
+  transition: box-shadow 0.3s ease;
+}
+
+.sticky-top.scrolled {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  height: 100px;
+}
+
+.logo-img {
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled .logo-img {
+  width: 60px;
+  height: 60px;
+} 
+
+.navbar-brand .logo-img{
+  width: 100px;
+  height: 100px;
+}
+
+
     </style>
   </head>
 
@@ -259,15 +286,15 @@
 
     <!-- Start Header/Navigation -->
     <nav
-      class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark"
+      class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark sticky-top"
       arial-label="Furni navigation bar"
     >
       <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand"  href="index.html">
           <img
             src="images/logo@10x.png"
             alt="Leafeed Company"
-            style="width: 100px; height: 100px"
+            class="logo-img"
         /></a>
 
         <button
@@ -819,5 +846,18 @@
         once: true, // chỉ chạy 1 lần khi cuộn tới
       });
     </script>
+
+    
+<script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 20) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+
   </body>
 </html>
