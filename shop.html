@@ -8,7 +8,7 @@
     />
     <meta name="author" content="Untree.co" />
     <link rel="shortcut icon" href="images/logo@10x.png" />
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
     <meta name="description" content="" />
     <meta name="keywords" content="bootstrap, bootstrap4" />
@@ -24,24 +24,24 @@
     <title>Leafeed Company</title>
 
     <style>
-
-      .section-title{
+      .section-title {
         color: #198754;
         font-weight: bolder;
       }
 
-      .list-unstyled li, .col-lg-6 p{
+      .list-unstyled li,
+      .col-lg-6 p {
         color: #212529;
-        font-size:medium;
+        font-size: medium;
       }
 
       .testimonial-slider-wrap {
-  background: linear-gradient(135deg, #f0fff0, #e0f7fa);
-  padding: 60px 0;
-  border-radius: 24px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-}
+        background: linear-gradient(135deg, #f0fff0, #e0f7fa);
+        padding: 60px 0;
+        border-radius: 24px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+      }
 
       /* Vị trí tuyệt đối bên trong wrapper */
       #testimonial-nav {
@@ -85,6 +85,131 @@
       .testimonial-slider-wrap #testimonial-nav .prev {
         left: 30px;
       }
+
+      /* start quy trình sản xuất */
+
+      .process-section {
+        position: relative;
+        background-image: url("images/banner-produce.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        padding: 80px 20px;
+        color: white;
+      }
+
+      .section-overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* điều chỉnh độ tối ở đây */
+        z-index: 0;
+        border-radius: inherit;
+      }
+
+      .timeline-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        position: relative;
+      }
+
+      .process-step {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        max-width: 280px;
+        text-align: center;
+        position: relative;
+      }
+
+      .timeline-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+        z-index: 1;
+      }
+
+      .step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+
+      .step-text p {
+        text-align: justify;
+      }
+
+      .step-text h5 {
+        color: #e59834;
+      }
+
+      .step-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(6px);
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        transition: 0.3s ease;
+        min-height: 370px; /* hoặc giá trị phù hợp tùy chiều dài nội dung */
+        width: 100%;
+        color: white;
+        text-align: center;
+      }
+
+      .step-content:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .step-img {
+        max-width: 100%;
+        height: 200px;
+        object-fit: contain;
+        margin-bottom: 15px;
+        border-radius: 12px;
+      }
+
+      .arrow-line {
+  width: 200px;
+  height: 100px;
+}
+
+.arrow-line svg {
+  width: 100%;
+  height: 100%;
+}
+
+.arrow-line .curve {
+  fill: none;
+  stroke: #f9bf29; /* Màu mũi tên – có thể thay bằng #00c9a7 */
+  stroke-width: 4;
+}
+
+.arrow-line .arrow-head {
+  fill: #f9bf29; /* Màu mũi tên – giống với đường */
+}
+
+.arrow-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  animation: arrowBounce 1.2s infinite;
+}
+
+@keyframes arrowBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
     </style>
   </head>
 
@@ -120,11 +245,12 @@
                   ><i class="fa fa-user"></i> Log in</a
                 >
               </div>
-              <div class="header__top__right__social">
-                            </div>
-							<div class="header__top__right__auth">
-                                <a style="text-decoration: none;" href="#"><i class="fa-solid fa-cart-plus"></i> Cart</a>
-                            </div>
+              <div class="header__top__right__social"></div>
+              <div class="header__top__right__auth">
+                <a style="text-decoration: none" href="#"
+                  ><i class="fa-solid fa-cart-plus"></i> Cart</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -158,9 +284,13 @@
 
         <div class="collapse navbar-collapse" id="navbarsFurni">
           <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-            <li ><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item active"><a class="nav-link" href="shop.html">Product</a></li>
-            <li><a class="nav-link" href="index.html#about-us">What we do</a></li>
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item active">
+              <a class="nav-link" href="shop.html">Product</a>
+            </li>
+            <li>
+              <a class="nav-link" href="index.html#about-us">What we do</a>
+            </li>
             <li><a class="nav-link" href="contact.html">Contact us</a></li>
             <li><a class="nav-link" href="blog.html">News</a></li>
 
@@ -171,7 +301,7 @@
     </nav>
     <!-- End Header/Navigation -->
 
-    <div class="testimonial-slider-wrap position-relative"  data-aos="fade-up">
+    <div class="testimonial-slider-wrap position-relative" data-aos="fade-up">
       <div class="container" style="margin-bottom: 50px">
         <div id="testimonial-nav" class="mb-4 text-center">
           <span class="prev" data-controls="prev"
@@ -182,9 +312,9 @@
           ></span>
         </div>
 
-        <div class="testimonial-slider" >
+        <div class="testimonial-slider">
           <!-- Slide 1 -->
-          <div class="item" >
+          <div class="item">
             <div class="row justify-content-between align-items-center">
               <div class="col-lg-6">
                 <h2 class="section-title">Green Tea Polyphenols</h2>
@@ -205,10 +335,15 @@
                   <div class="col-md-7">
                     <ul class="list-unstyled mt-4">
                       <li><strong>Product name:</strong> Tea Polyphenols</li>
-                      <li><strong>Scientific name:</strong> Camellia Sinensis O. Ktze</li>
+                      <li>
+                        <strong>Scientific name:</strong> Camellia Sinensis O.
+                        Ktze
+                      </li>
                       <li><strong>Season:</strong> Spring and summer</li>
                       <li><strong>Part:</strong> Leaf</li>
-                      <li><strong>Extraction Type:</strong> Solvent Extraction</li>
+                      <li>
+                        <strong>Extraction Type:</strong> Solvent Extraction
+                      </li>
                       <li><strong>Specification:</strong> 50%-98%</li>
                       <li><strong>Form:</strong> powder</li>
                       <li><strong>Test:</strong> HPLC, UV</li>
@@ -221,14 +356,20 @@
                     <img
                       src="images/power.png"
                       alt="Green Tea Polyphenols"
-                      class="img-fluid" 
+                      class="img-fluid"
                     />
                   </div>
                 </div>
 
-                                <a href="shop.html" class="border-0 btn btn-success me-3 shadow-sm px-4 py-2" style="transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#f9bf29'" onmouseout="this.style.backgroundColor=''" >
-  Shop Now
-</a>
+                <a
+                  href="shop.html"
+                  class="border-0 btn btn-success me-3 shadow-sm px-4 py-2"
+                  style="transition: background-color 0.3s"
+                  onmouseover="this.style.backgroundColor='#f9bf29'"
+                  onmouseout="this.style.backgroundColor=''"
+                >
+                  Shop Now
+                </a>
               </div>
               <div class="col-md-5 text-center">
                 <img
@@ -240,11 +381,11 @@
                 <div
                   class="card"
                   style="
-                    background-color:#3b5d50;
+                    background-color: #3b5d50;
                     width: fit-content;
                     padding: 10px;
                     border-radius: 16px;
-                    color: white;;
+                    color: white;
                     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
                     transition: transform 0.2s ease, box-shadow 0.2s ease;
                     margin: 0 auto;
@@ -281,10 +422,15 @@
                   <div class="col-md-7">
                     <ul class="list-unstyled mt-4">
                       <li><strong>Product name:</strong> Tea Polyphenols</li>
-                      <li><strong>Scientific name:</strong> Camellia Sinensis O. Ktze</li>
+                      <li>
+                        <strong>Scientific name:</strong> Camellia Sinensis O.
+                        Ktze
+                      </li>
                       <li><strong>Season:</strong> Spring and summer</li>
                       <li><strong>Part:</strong> Leaf</li>
-                      <li><strong>Extraction Type:</strong> Solvent Extraction</li>
+                      <li>
+                        <strong>Extraction Type:</strong> Solvent Extraction
+                      </li>
                       <li><strong>Specification:</strong> 50%-98%</li>
                       <li><strong>Form:</strong> powder</li>
                       <li><strong>Test:</strong> HPLC, UV</li>
@@ -301,9 +447,15 @@
                     />
                   </div>
                 </div>
-                <a href="shop.html" class="border-0 btn btn-success me-3 shadow-sm px-4 py-2" style="transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#f9bf29'" onmouseout="this.style.backgroundColor=''" >
-  Shop Now
-</a>
+                <a
+                  href="shop.html"
+                  class="border-0 btn btn-success me-3 shadow-sm px-4 py-2"
+                  style="transition: background-color 0.3s"
+                  onmouseover="this.style.backgroundColor='#f9bf29'"
+                  onmouseout="this.style.backgroundColor=''"
+                >
+                  Shop Now
+                </a>
               </div>
               <div class="col-md-5 text-center">
                 <img
@@ -315,11 +467,11 @@
                 <div
                   class="card"
                   style="
-                    background-color:#3b5d50;
+                    background-color: #3b5d50;
                     width: fit-content;
                     padding: 10px;
                     border-radius: 16px;
-                    color: white;;
+                    color: white;
                     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
                     transition: transform 0.2s ease, box-shadow 0.2s ease;
                     margin: 0 auto;
@@ -355,11 +507,16 @@
                   <!-- Thông số kỹ thuật -->
                   <div class="col-md-7">
                     <ul class="list-unstyled mt-4">
-                     <li><strong>Product name:</strong> Tea Polyphenols</li>
-                      <li><strong>Scientific name:</strong> Camellia Sinensis O. Ktze</li>
+                      <li><strong>Product name:</strong> Tea Polyphenols</li>
+                      <li>
+                        <strong>Scientific name:</strong> Camellia Sinensis O.
+                        Ktze
+                      </li>
                       <li><strong>Season:</strong> Spring and summer</li>
                       <li><strong>Part:</strong> Leaf</li>
-                      <li><strong>Extraction Type:</strong> Solvent Extraction</li>
+                      <li>
+                        <strong>Extraction Type:</strong> Solvent Extraction
+                      </li>
                       <li><strong>Specification:</strong> 50%-98%</li>
                       <li><strong>Form:</strong> powder</li>
                       <li><strong>Test:</strong> HPLC, UV</li>
@@ -377,9 +534,15 @@
                   </div>
                 </div>
 
-                                <a href="shop.html" class="border-0 btn btn-success me-3 shadow-sm px-4 py-2" style="transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#f9bf29'" onmouseout="this.style.backgroundColor=''" >
-  Shop Now
-</a>
+                <a
+                  href="shop.html"
+                  class="border-0 btn btn-success me-3 shadow-sm px-4 py-2"
+                  style="transition: background-color 0.3s"
+                  onmouseover="this.style.backgroundColor='#f9bf29'"
+                  onmouseout="this.style.backgroundColor=''"
+                >
+                  Shop Now
+                </a>
               </div>
               <div class="col-md-5 text-center">
                 <img
@@ -391,11 +554,11 @@
                 <div
                   class="card"
                   style="
-                    background-color:#3b5d50;
+                    background-color: #3b5d50;
                     width: fit-content;
                     padding: 10px;
                     border-radius: 16px;
-                    color: white;;
+                    color: white;
                     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
                     transition: transform 0.2s ease, box-shadow 0.2s ease;
                     margin: 0 auto;
@@ -412,6 +575,103 @@
         </div>
       </div>
     </div>
+
+    <section class="process-section py-5 text-white position-relative" data-aos="fade-left">
+      <div class="section-overlay"></div>
+      <div class="container position-relative">
+        <h2 class="text-center section-title mb-5" style="color: #e59834">
+          Green Tea Extract Production Process
+        </h2>
+
+        <div class="timeline-wrapper">
+          <!-- Step 1 -->
+          <div class="process-step">
+            <div class="step-content">
+              <img src="images/H1.png" alt="Step 1" class="step-img" />
+              <div class="step-text">
+                <h5><strong>Step 1: Raw Material Cleaning</strong></h5>
+                <p>
+                  Green tea leaves are carefully cleaned to remove dust and
+                  impurities.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-step">
+            <div class="step-content">
+              <img src="images/H2.png" alt="Step 2" class="step-img" />
+              <div class="step-text">
+                <h5><strong>Step 2: Extraction with Ethanol</strong></h5>
+                <p>
+                  Leaves are placed into the extraction tank; ethanol is added
+                  gradually at 2–3 times the volume.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-step">
+            <div class="step-content">
+              <img src="images/H2.png" alt="Step 3" class="step-img" />
+              <div class="step-text">
+                <h5><strong>Step 3: Heating</strong></h5>
+                <p>
+                  The extraction tank is gently heated until the mixture reaches
+                  desired temperature.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="process-step">
+            <div class="step-content">
+              <img src="images/H4.png" alt="Step 6" class="step-img" />
+              <div class="step-text">
+                <h5><strong>Step 6: Spray Drying</strong></h5>
+                <p>
+                  The concentrated extract is spray-dried to produce fine
+                  polyphenol powder.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="process-step">
+            <div class="step-content">
+              <img src="images/H3.png" alt="Step 5" class="step-img" />
+              <div class="step-text">
+                <h5>
+                  <strong>Step 5: Condensation & Solvent Recovery</strong>
+                </h5>
+                <p>
+                  Steam is condensed and solvent is recycled into the system,
+                  ensuring sustainability.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="process-step">
+            <div class="step-content">
+              <img src="images/H2.png" alt="Step 4" class="step-img" />
+              <div class="step-text">
+                <h5><strong>Step 4: Vacuum Concentration</strong></h5>
+                <p>
+                  The extract is concentrated under low-temperature vacuum to
+                  retain bioactives.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Start Footer Section -->
     <footer class="footer-section">
@@ -486,7 +746,8 @@
                 My, Tan Thuan Tay Ward, District 7, Ho Chi Minh City, Vietnam.
               </address>
               <p>
-                <i><i class="fa-solid fa-industry"></i></i> Factory: Trung Thanh commune, Thuan Thanh commune, Pho Yen city, Thai Nguyen province
+                <i><i class="fa-solid fa-industry"></i></i> Factory: Trung Thanh
+                commune, Thuan Thanh commune, Pho Yen city, Thai Nguyen province
               </p>
             </div>
 
@@ -511,12 +772,12 @@
               <div class="col-6 col-sm-6 col-md-3">
                 <ul class="list-unstyled">
                   <li><a href="index.html">Home</a></li>
-									<li><a href="shop.html">Product</a></li>
-									<li><a href="index.html#about-us">What we do</a></li>
-									<li><a href="contact.html">Contact us</a></li>
-									<li><a href="blog.html">News</a></li>
+                  <li><a href="shop.html">Product</a></li>
+                  <li><a href="index.html#about-us">What we do</a></li>
+                  <li><a href="contact.html">Contact us</a></li>
+                  <li><a href="blog.html">News</a></li>
 
-									<!-- <li><a href="feedback.html">Feedback</a></li> -->
+                  <!-- <li><a href="feedback.html">Feedback</a></li> -->
                 </ul>
               </div>
 
@@ -552,11 +813,11 @@
     <script src="js/tiny-slider.js"></script>
     <script src="js/custom.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000, // thời gian animation
-    once: true      // chỉ chạy 1 lần khi cuộn tới
-  });
-</script>
+    <script>
+      AOS.init({
+        duration: 1000, // thời gian animation
+        once: true, // chỉ chạy 1 lần khi cuộn tới
+      });
+    </script>
   </body>
 </html>
